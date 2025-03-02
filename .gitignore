@@ -1,3 +1,5 @@
 test.html
 test.py
 .gradio/
+keys.env
+__pycache__/

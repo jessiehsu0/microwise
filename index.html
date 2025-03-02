@@ -19,20 +19,35 @@
                 <h2 class="mb-4">Enter your info:</h2>
                 <form id="userForm">
                     <div class="mb-3">
+                        <label for="gender" class="form-label">Gender</label>
+                        <select class="form-select" id="gender" required>
+                            <option value="m">M</option>
+                            <option value="f">F</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
                         <label for="age" class="form-label">Age</label>
                         <input type="number" id="age" name="age" class="form-control" required>
                     </div>
                     <div class="mb-3">
-                        <label for="income" class="form-label">Income</label>
-                        <input type="number" id="income" name="income" class="form-control" required>
+                        <label for="guarantor" class="form-label">Guarantor?</label>
+                        <select class="form-select" id="guarantor" required>
+                            <option value="y">Yes</option>
+                            <option value="n">No</option>
+                        </select>
                     </div>
                     <div class="mb-3">
-                        <label for="savings" class="form-label">Savings</label>
-                        <input type="number" id="savings" name="savings" class="form-control" required>
+                        <label for="highest-education" class="form-label">Highest Education</label>
+                        <select class="form-select" id="highest-education" required>
+                            <option value="h">High School or Below</option>
+                            <option value="b">Bachelor Degree</option>
+                            <option value="m">Master or Above</option>
+                            <option value="c">Some college</option>
+                        </select>
                     </div>
                     <div class="mb-3">
-                        <label for="expenses" class="form-label">Expenses</label>
-                        <input type="number" id="expenses" name="expenses" class="form-control" required>
+                        <label for="terms" class="form-label">Terms</label>
+                        <input type="number" id="terms" name="terms" class="form-control" required>
                     </div>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
@@ -46,7 +61,7 @@
         <h3>MicroWise Chatbot</h3> 
         <iframe src="http://127.0.0.1:7860/" width="100%" height="600px"></iframe> 
     </div>
-    
+
 <!--
     <div id="chatbotPanel">
         <button id="closeChat" onclick="closeChat()">&times;</button>

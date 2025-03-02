@@ -5,15 +5,55 @@ function openChat() {
 
     chatOpened = true;
 }
+/*
+document.getElementById('userForm').addEventListener('submit', async function(event) {
+    event.preventDefault(); // Prevent the form from submitting the default way
 
+    const formData = new FormData(this);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+        const response = await fetch('/submit', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+        document.getElementById('responseMessage').textContent = result.message;
+    } catch (error) {
+        console.error('Error submitting form:', error);
+        document.getElementById('responseMessage').textContent = 'An error occurred.';
+    }
+});
+*/
 document.getElementById('userForm').addEventListener('submit', function(event) {
     event.preventDefault();
     const age = document.getElementById('age').value;
-    const income = document.getElementById('income').value;
-    const savings = document.getElementById('savings').value;
-    const expenses = document.getElementById('expenses').value;
-    console.log('Form Submitted:', { age, income, savings, expenses });
-
+    const gender = document.getElementById('gender').value;
+    const guarantor = document.getElementById('guarantor').value;
+    const highest_education = document.getElementById('highest-education').value;
+    const terms = document.getElementById('terms').value;
+    const data = { age, gender, guarantor, highest_education };
+/*
+    fetch('/submit-data', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+    })
+    .then(response => response.json())
+    .then(result => {
+        console.log('Success:', result);
+        if (!chatOpened) {
+            openChat();
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+*/
     if (!chatOpened) {
         openChat();
     }
@@ -29,8 +69,6 @@ function sendMessage() {
         chatContent.appendChild(messageElement);
         chatInput.value = '';
     }
-
-    // Chatbot API Integration
 }
 
 document.getElementById('chatInput').addEventListener('keypress', function(event) {
