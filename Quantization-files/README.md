@@ -27,3 +27,17 @@
 
   ![Model Configuration](Model-Configuration.png)
 
+
+**Required Libraries for running the jupyter notebook:**
+
+- auto-gptq
+- optimum
+- transformers
+- datasets
+- evaluate
+- torch
+- pandas
+- peft
+- scikit-learn
+- dotenv
+- pandas
