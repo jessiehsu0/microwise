@@ -25,6 +25,5 @@
 
  **Model Configuration:**
 
- 
- 
+  ![Model Configuration](Model-Configuration.png)
 
